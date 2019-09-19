@@ -11,10 +11,10 @@ $phone = strip_tags(htmlspecialchars($_POST['phone']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 
 // Create the email and send the message
-$to = "lukamatheus0@gmail.com"; // Add your email address inbetween the "" replacing yourname@yourdomain.com - This is where the form will send a message to.
+$to = ""; // Add your email address inbetween the "" replacing yourname@yourdomain.com - This is where the form will send a message to.
 $subject = "Mensagem do seu site fi:  $name";
 $body = "Você recebeu uma nova mensagem.\n\n"."Formulario:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
-$header = "From: luka@lukalickah.dx.am\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$header = "From:\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $header .= "Reply-To: $email";	
 
 if(!mail($to, $subject, $body, $header))
